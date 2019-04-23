@@ -36,6 +36,6 @@ Each game's final score and team details were available in the repository's lega
 The ggplot and plotly packages were used to visualize the play-level efficiency and opportunity for NFL players, grouped by team, play type, and position, using a variety of state of the art effeciency and opportunity metrics.
 
 Additional. Notes: 
-*Only the 2016-2018 seasons include a unique  variable for whether the play resulted in a touchback. The `touchback` column for all plays 2009-2015 are NAs.
+* Only the 2016-2018 seasons include a unique  variable for whether the play resulted in a touchback. The `touchback` column for all plays 2009-2015 are NAs.
 
-*The data also includes pre-season and post-season (playoffs) data. It was excluded from this project.
+* The data also includes pre-season and post-season (playoffs) data. It was excluded from this project.
