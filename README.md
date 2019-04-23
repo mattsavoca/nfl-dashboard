@@ -33,7 +33,7 @@ Finally, each play includes nflscrapR's *Expected Points,* `ep`, model, along wi
 
 Each game's final score and team details were available in the repository's legacy files, and were added to the play-level details for this app. The legacy files also included team rosters, however the data only includes Quarterbacks (QB) and four additional positions: Running Backs (RB), Fullbacks (FB), Wide Receivers (WR), and Tight Ends (TE), collectively referred to as the skill-positions. This "limitation" was an influence on the project's scope.
 
-The ggplot and plotly packages were used to visualize the play-level efficiency and opportunity for NFL players, grouped by team, play type, and position, using a variety of state of the art effeciency and opportunity metrics.
+The ggplot and plotly packages were used to visualize the play-level efficiency and opportunity for NFL players, grouped by team, play type, and position, using a variety of state of the art efficiency and opportunity metrics.
 
 Additional. Notes: 
 * Only the 2016-2018 seasons include a unique  variable for whether the play resulted in a touchback. The `touchback` column for all plays 2009-2015 are NAs.
