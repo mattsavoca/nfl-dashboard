@@ -8,11 +8,11 @@ https://mattscottsavoca.shinyapps.io/nfl_dashboard/
 Data is from: https://github.com/ryurko/nflscrapR-data
 
 The play-by-play data includes 250+ unique variables per play, including:
-	**Game state:** Offensive Team, Defensive Team, Team Scores, Yard Line, Down, Yards to Go, Time in remaining in quarter, half, and game.
-	**Pre-pass Variables:** Play-Action (Fake-Run), QB Hit, QB Sack.
-	**Play Result and Scoring Details:** Play Type, Penalty, Run Direction, Air Yards, Yards After Catch (YAC), Touchdown, Field Goal, Interception, Fumble.
-	**Offensive names and NFL Global Stats and Info Services (GSIS) Player IDs:** each quarterback, ball-carrier, or intended receiver.
-	**Defensive name sand NFL Global Stats and Info Services (GSIS) Player IDs:** each player involved in a sack, tackle, fumble, lateral or interception.
+	- **Game state:** Offensive Team, Defensive Team, Team Scores, Yard Line, Down, Yards to Go, Time in remaining in quarter, half, and game.
+	- **Pre-pass Variables:** Play-Action (Fake-Run), QB Hit, QB Sack.
+	- **Play Result and Scoring Details:** Play Type, Penalty, Run Direction, Air Yards, Yards After Catch (YAC), Touchdown, Field Goal, Interception, Fumble.
+	- **Offensive names and NFL Global Stats and Info Services (GSIS) Player IDs:** each quarterback, ball-carrier, or intended receiver.
+	- **Defensive name sand NFL Global Stats and Info Services (GSIS) Player IDs:** each player involved in a sack, tackle, fumble, lateral or interception.
 
 The data includes *Air Yards* (distance the ball travelled in the air before a receiver or defender attempted a play on the ball) information, `air_yards`, which serves as the basis for many popular player efficiency metrics, such as *Passer Air Conversion Ratio (PACR)* and *Weighted Opportunity Rating (WOPR),* used throughout the app. Links to additional details on these metrics are available within the app. 
 
