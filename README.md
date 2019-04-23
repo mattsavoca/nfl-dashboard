@@ -1,7 +1,7 @@
 # nfl-dashboard
 Visualizing Top NFL Performers and teams by a user-defined amount of Weeks in the past.
 
-This shiny app visualizes the NFL's regular-season play-level data from the 2009 thru 2018 seasons, accessed and collected from the NFL's using the nflscrapR package. Understanding that the recent past provides more value in predicting future NFL performance, the app includes myriad opportunities for the user to filter the data to only include results from the past few games, or if they desire, the past ten years.  
+This shiny app visualizes the NFL's regular-season play-level data from the 2009 thru 2018 seasons, accessed and collected from NFL.com using the nflscrapR package. Understanding that the recent past provides more value in predicting future NFL performance, the app includes myriad opportunities for the user to filter the data to only include results from the past few games, or if they desire, the past ten years.  
 
 The shiny app focuses on aggregating the play-level details into game-level, team-level, Quarterback-level, and "skill position"-level visualizations, which can be beneficial in Football proxy games, such as Fantasy Football and Player Proposition ("Prop") bets.
 
