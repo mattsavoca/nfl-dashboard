@@ -23,6 +23,7 @@ shinyServer(function(input, output, session){
   qb_reactive = reactive({
    qb_df = qb_df %>% 
       filter(wk_ovr_rk > (max_wk - as.numeric(input$qb_weeks_back))) %>%
+      filter( !(player_info %in%  input$qb_filter)) %>%
       group_by(dropback_ID) %>% mutate(
         Player = Player, 
         total_dropbacks = sum(qb_dropback),
@@ -56,13 +57,16 @@ shinyServer(function(input, output, session){
   qb_indiv_reactive = reactive({
     qb_indiv_df = qb_df %>% 
       filter(wk_ovr_rk > (max_wk - as.numeric(input$qb_weeks_back))) %>%
-      filter(Player == input$qb_indiv)
+      filter(Player == input$qb_indiv) %>%
+      filter( !(player_info %in%  input$qb_filter))
+    
   })
   
   skill_reactive =  reactive({
     skill_df %>% 
       filter(wk_ovr_rk > (max_wk - as.numeric(input$skill_weeks_back))) %>%
       filter(Pos %in% input$checkGroup) %>%
+      filter( !(player_info %in%  input$skill_filter)) %>%
       group_by(skill_ID) %>% mutate(
         Player = Player, 
         total_opps = n(),
@@ -105,7 +109,8 @@ shinyServer(function(input, output, session){
     skill_indiv_df = skill_df %>% 
       filter(wk_ovr_rk > (max_wk - as.numeric(input$skill_weeks_back))) %>%
       filter(Player == input$skill_indiv) %>%
-      filter(Pos %in% input$checkGroup)
+      filter(Pos %in% input$checkGroup) %>%
+      filter( !(player_info %in%  input$qb_filter))
   })
   
   explore_reactive = reactive({
@@ -716,6 +721,7 @@ shinyServer(function(input, output, session){
     qb_indiv_observe = 
       sort(unique(qb_df %>%
                     filter(wk_ovr_rk > (max_wk - as.numeric(input$qb_weeks_back))) %>%
+                    filter( !(player_info %in%  input$qb_filter)) %>%
                     mutate(Player = reorder(Player, -qb_dropback, sum, na.rm=T)) %>%
                     .$Player))
     
@@ -729,6 +735,7 @@ shinyServer(function(input, output, session){
       sort(unique(skill_df %>%
                     filter(wk_ovr_rk > (max_wk - as.numeric(input$skill_weeks_back))) %>%
                     filter(Pos %in% input$checkGroup) %>%
+                    filter( !(player_info %in%  input$qb_filter)) %>%
                     mutate(Player = reorder(Player, -ms_team_opportunities, mean, na.rm=T)) %>%
                     .$Player))
     

@@ -9,7 +9,11 @@ shinyUI(dashboardPage(
       menuItem("Team Efficiency Analysis", tabName = "team", icon = icon("bar-chart-o")),
       menuItem("Quarterback Analysis", tabName = "qb", icon = icon("users")),
       menuItem("Skill Position Analysis", tabName = "skill", icon = icon("child")),
-      menuItem("Leaguewide Trend Explorer", tabName = "explore", icon = icon("binoculars"))
+      menuItem("Leaguewide Trend Explorer", tabName = "explore", icon = icon("binoculars")),
+      selectizeInput('qb_filter', 'Filter a QB from Individual Analysis', 
+                     choices = sort(unique(qb_df %>% filter(Pos == "QB") %>% .$player_info)), multiple = TRUE),
+      selectizeInput('skill_filter', 'Filter a Skill Player from Individual Analysis', 
+                     choices = sort(unique(skill_df %>% filter(Pos != "QB") %>% .$player_info)), multiple = TRUE)
     )
   ),
   # Body #####
